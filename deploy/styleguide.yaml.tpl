@@ -7,7 +7,7 @@ metadata:
   name: styleguide
   labels:
     run: styleguide
-    subdomain: accounts
+    subdomain: styleguide
 spec:
   type: NodePort
   ports:
