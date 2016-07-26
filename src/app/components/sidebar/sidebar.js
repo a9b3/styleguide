@@ -27,14 +27,16 @@ class Sidebar extends Component {
 
       <div styleName='body'>
         <div styleName='body-inner'>
-          <Link styleName='item'
+          <Link styleName='list-item'
             to='/styleguide/general'
+            activeClassName={`${styles['list-item-active']}`}
           >
             General
           </Link>
 
-          <Link styleName='item'
+          <Link styleName='list-item'
             to='/styleguide/layout'
+            activeClassName={`${styles['list-item-active']}`}
           >
             Layout
           </Link>
@@ -43,7 +45,7 @@ class Sidebar extends Component {
 
       <div styleName='end footer'>
         <div styleName='item'>
-          Guide
+          <a href='https://github.com/esayemm'>@esayemm</a>
         </div>
       </div>
     </div>

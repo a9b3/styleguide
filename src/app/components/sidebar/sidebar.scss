@@ -28,6 +28,29 @@ $border-color: $dark6;
   }
 }
 
+.list-item {
+  composes: item;
+  color: inherit;
+  transition: all 0.5s;
+
+  &:hover {
+
+  }
+}
+.list-item-active {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    background: $blue1;
+    left: 0;
+    top: 0;
+  }
+}
+
 .footer {
 
 }
