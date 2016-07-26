@@ -168,6 +168,7 @@ const configs = {
       require('rucksack-css')({
         autoprefixer: true,
       }),
+      require('autoprefixer'),
       require('precss'),
     ]
   },

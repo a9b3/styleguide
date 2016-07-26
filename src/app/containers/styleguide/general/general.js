@@ -1,19 +1,23 @@
 import styles from './general.scss'
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import CSSModules from 'react-css-modules'
-import { connect } from 'react-redux'
 import Helmet from 'react-helmet'
 import Swatch from '../../../components/swatch/swatch.js'
-import Banner from '../components/banner/banner.js'
-import Card from '../components/card/card.js'
+import Banner from '../../../components/banner/banner.js'
+import Card from '../../../components/card/card.js'
+import CodeSnippet from '../../../components/code-snippet/code-snippet.js'
+import jsxToString from 'jsx-to-string'
 
-const Typography = props => {
+const Typography = () => {
+  const Header1Ex = <div className={`${styles.section}`}>
+    {/* comment */}
+    <h1>Header 1</h1>
+    <div className={`${styles.header1}`}>Header 1</div>
+    <div className='h1'>Header 1</div>
+  </div>
+
   return <div className={`${styles.type}`}>
-    <div className={`${styles.section}`}>
-      <h1>Header 1</h1>
-      <div className={`${styles.header1}`}>Header 1</div>
-      <div className='h1'>Header 1</div>
-    </div>
+    {Header1Ex}
     <div className={`${styles.section}`}>
       <h2>Header 2</h2>
     </div>
@@ -42,10 +46,14 @@ const Typography = props => {
         quia pariatur. Vero expedita asperiores similique!
       </div>
     </div>
+
+    <CodeSnippet type='js'>
+      {jsxToString(Header1Ex)}
+    </CodeSnippet>
   </div>
 }
 
-const Colors = props => {
+const Colors = () => {
   const rows = [
     [
       'dark1',
@@ -138,7 +146,7 @@ class General extends Component {
       />
 
       <Banner
-        text='General'
+        title='General'
       />
 
       <div styleName='big section'>

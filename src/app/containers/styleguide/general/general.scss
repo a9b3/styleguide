@@ -1,20 +1,15 @@
 @import '~styles/shared';
 
-// extract later
 .container {
   composes: flex-col;
-  height: 100vh;
+  flex-grow: 1;
+  animation: fadeIn 0.5s linear;
 }
 
 .content {
   composes: flex-col;
   flex-grow: 1;
   overflow-y: auto;
-}
-// extract later
-
-.styleguide {
-  composes: container;
 }
 
 .sidebar {
@@ -31,13 +26,6 @@
 
 .header1 {
   composes: h1;
-}
-.type {
-
-}
-
-.colors {
-
 }
 
 .color-row {

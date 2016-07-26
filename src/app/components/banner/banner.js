@@ -4,17 +4,17 @@ import CSSModules from 'react-css-modules'
 
 class Banner extends Component {
   static propTypes = {
-    text: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   }
 
   static defaultProps = {
-    text: 'Banner',
+    title: 'Banner',
   }
 
   render() {
     return <div styleName='banner'>
       <h1>
-        {this.props.text}
+        {this.props.title}
       </h1>
     </div>
   }
