@@ -5,7 +5,7 @@
 }
 
 .header {
-  composes: flex-row;
+  composes: flex-row h4 semi-bold;
   color: $blue3;
 }
 

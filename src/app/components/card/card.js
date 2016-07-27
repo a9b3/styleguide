@@ -15,9 +15,7 @@ class Card extends Component {
   render() {
     return <div styleName='card'>
       <div styleName='header'>
-        <h4>
-          {this.props.header}
-        </h4>
+        {this.props.header}
       </div>
 
       <div styleName='content'>

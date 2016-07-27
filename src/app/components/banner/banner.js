@@ -24,9 +24,11 @@ export default class Banner extends Component {
     return <div styleName='banner'
       {...otherProps}
     >
-      <h1>
-        {title}
-      </h1>
+      <div styleName='content'>
+        <h1 styleName='title'>
+          {title}
+        </h1>
+      </div>
     </div>
   }
 }
