@@ -2,7 +2,11 @@ import styles from './swatch.scss'
 import React, { Component, PropTypes } from 'react'
 import CSSModules from 'react-css-modules'
 
-class Swatch extends Component {
+@CSSModules(styles, {
+  allowMultiple: true,
+  errorWhenNotFound: false,
+})
+export default class Swatch extends Component {
   static propTypes = {
     colorName: PropTypes.string.isRequired,
   }
@@ -10,21 +14,12 @@ class Swatch extends Component {
   render() {
     const { colorName } = this.props
     return <div styleName='swatch'>
-      <div
-        styleName='color'
-        className={`${colorName}`}
-      />
+      <div styleName='color'
+        className={`${colorName}`} />
 
-    <div
-      styleName='text'
-    >
+      <div styleName='text'>
         {this.props.colorName}
       </div>
     </div>
   }
 }
-
-export default CSSModules(Swatch, styles, {
-  allowMultiple: true,
-  errorWhenNotFound: false,
-})

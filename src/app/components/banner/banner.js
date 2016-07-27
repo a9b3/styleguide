@@ -2,7 +2,11 @@ import styles from './banner.scss'
 import React, { Component, PropTypes } from 'react'
 import CSSModules from 'react-css-modules'
 
-class Banner extends Component {
+@CSSModules(styles, {
+  allowMultiple: true,
+  errorWhenNotFound: false,
+})
+export default class Banner extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
   }
@@ -12,15 +16,17 @@ class Banner extends Component {
   }
 
   render() {
-    return <div styleName='banner'>
+    const {
+      title,
+      ...otherProps,
+    } = this.props
+
+    return <div styleName='banner'
+      {...otherProps}
+    >
       <h1>
-        {this.props.title}
+        {title}
       </h1>
     </div>
   }
 }
-
-export default CSSModules(Banner, styles, {
-  allowMultiple: true,
-  errorWhenNotFound: false,
-})

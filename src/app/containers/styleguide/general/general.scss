@@ -9,12 +9,11 @@
 }
 
 .content {
-  padding: 2em;
-}
-
-.sidebar {
   composes: flex-col;
   flex-grow: 1;
+  padding: 2em;
+  margin: 0 auto;
+  max-width: $max-width;
 }
 
 .section {
@@ -24,10 +23,6 @@
   margin: 2em;
 }
 
-.header1 {
-  composes: h1;
-}
-
 .color-row {
   composes: flex-row;
 }
@@ -35,7 +30,9 @@
 .type {
   .section {
     padding: 0;
-    background: $dark8;
+    background: $dark7;
+    border-top: 1px solid $dark6;
+    border-bottom: 1px solid $dark6;
     margin: 1em 0;
   }
   .section:first-child {

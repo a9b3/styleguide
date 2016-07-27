@@ -5,14 +5,10 @@ import Helmet from 'react-helmet'
 import Swatch from '../../../components/swatch/swatch.js'
 import Banner from '../../../components/banner/banner.js'
 import Card from '../../../components/card/card.js'
-import CodeSnippet from '../../../components/code-snippet/code-snippet.js'
-import jsxToString from 'jsx-to-string'
 
 const Typography = () => {
   const Header1Ex = <div className={`${styles.section}`}>
     <h1>Header 1</h1>
-    <div className={`${styles.header1}`}>Header 1</div>
-    <div className='h1'>Header 1</div>
   </div>
 
   return <div className={`${styles.type}`}>
@@ -45,10 +41,19 @@ const Typography = () => {
         quia pariatur. Vero expedita asperiores similique!
       </div>
     </div>
-
-    <CodeSnippet type='js'>
-      {jsxToString(Header1Ex)}
-    </CodeSnippet>
+    <div className={`${styles.section}`}>
+      <p>
+        This is a paragraph. Amet labore placeat magnam aut voluptates aliquam, quaerat
+        expedita
+        earum! Corrupti cupiditate velit perferendis repellat nobis asperiores
+        quaerat nostrum reiciendis! Doloremque ducimus debitis exercitationem
+        quia pariatur. Vero expedita asperiores similique! This is a paragraph.
+        Amet labore placeat magnam aut voluptates aliquam, quaerat expedita
+        earum! Corrupti cupiditate velit perferendis repellat nobis asperiores
+        quaerat nostrum reiciendis! Doloremque ducimus debitis exercitationem
+        quia pariatur. Vero expedita asperiores similique!
+      </p>
+    </div>
   </div>
 }
 
@@ -140,7 +145,11 @@ const Colors = () => {
   </div>
 }
 
-class General extends Component {
+@CSSModules(styles, {
+  allowMultiple: true,
+  errorWhenNotFound: false,
+})
+export default class General extends Component {
   render() {
     return <div styleName='container'>
       <Helmet title='General' />
@@ -162,8 +171,3 @@ class General extends Component {
     </div>
   }
 }
-
-export default CSSModules(General, styles, {
-  allowMultiple: true,
-  errorWhenNotFound: false,
-})
