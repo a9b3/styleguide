@@ -10,7 +10,6 @@ import jsxToString from 'jsx-to-string'
 
 const Typography = () => {
   const Header1Ex = <div className={`${styles.section}`}>
-    {/* comment */}
     <h1>Header 1</h1>
     <div className={`${styles.header1}`}>Header 1</div>
     <div className='h1'>Header 1</div>
@@ -64,6 +63,9 @@ const Colors = () => {
       'dark6',
       'dark7',
       'dark8',
+    ],
+    [
+      'grey',
     ],
     [
       'blue1',
@@ -141,24 +143,21 @@ const Colors = () => {
 class General extends Component {
   render() {
     return <div styleName='container'>
-      <Helmet
-        title='General'
-      />
+      <Helmet title='General' />
+      <Banner title='General' />
 
-      <Banner
-        title='General'
-      />
+      <div styleName='content'>
+        <div styleName='big section'>
+          <Card header='Typography'>
+            <Typography />
+          </Card>
+        </div>
 
-      <div styleName='big section'>
-        <Card header='Typography'>
-          <Typography />
-        </Card>
-      </div>
-
-      <div styleName='big section'>
-        <Card header='Colors'>
-          <Colors />
-        </Card>
+        <div styleName='big section'>
+          <Card header='Colors'>
+            <Colors />
+          </Card>
+        </div>
       </div>
     </div>
   }

@@ -20,8 +20,8 @@ class Sidebar extends Component {
     return <div styleName='sidebar'>
       <div styleName='header item'>
         <div>
-        <h4>Style</h4>
-        <h4 className='light'>Guide</h4>
+        <h4 className='semi-bold'>Style</h4>
+        <h4>Guide</h4>
         </div>
       </div>
 
@@ -29,23 +29,32 @@ class Sidebar extends Component {
         <div styleName='body-inner'>
           <Link styleName='list-item'
             to='/styleguide/general'
-            activeClassName={`${styles['list-item-active']}`}
-          >
+            activeClassName={`${styles['list-item-active']}`}>
             General
           </Link>
 
           <Link styleName='list-item'
             to='/styleguide/layout'
-            activeClassName={`${styles['list-item-active']}`}
-          >
+            activeClassName={`${styles['list-item-active']}`}>
             Layout
+          </Link>
+
+          <Link styleName='list-item'
+            to='/styleguide/animation'
+            activeClassName={`${styles['list-item-active']}`}>
+            Animation
           </Link>
         </div>
       </div>
 
       <div styleName='end footer'>
         <div styleName='item'>
-          <a href='https://github.com/esayemm'>@esayemm</a>
+          <div>
+            <div>
+              Sam Lau
+            </div>
+            <a href='https://github.com/esayemm'>@esayemm</a>
+          </div>
         </div>
       </div>
     </div>

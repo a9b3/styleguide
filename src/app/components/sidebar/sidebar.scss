@@ -6,7 +6,9 @@ $border-color: $dark6;
   composes: flex-col;
   flex-grow: 1;
   border-right: 1px solid $border-color;
-  width: 250px;
+  width: 200px;
+  box-shadow: 0px 0 5px rgba(black, .2);
+  z-index: 999;
 }
 
 .header {
@@ -15,7 +17,7 @@ $border-color: $dark6;
 
 .item {
   composes: flex-row;
-  padding: .5em 1em;
+  padding: 1em 2em;
 }
 
 .body {
@@ -29,13 +31,9 @@ $border-color: $dark6;
 }
 
 .list-item {
-  composes: item;
+  composes: item semi-bold;
   color: inherit;
   transition: all 0.5s;
-
-  &:hover {
-
-  }
 }
 .list-item-active {
   position: relative;
@@ -52,5 +50,5 @@ $border-color: $dark6;
 }
 
 .footer {
-
+  border-top: 1px solid $border-color;
 }
