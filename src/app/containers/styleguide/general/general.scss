@@ -3,13 +3,13 @@
 .container {
   composes: flex-col;
   flex-grow: 1;
+  overflow-y: auto;
   animation: fadeIn 0.5s linear;
+  background: $grey;
 }
 
 .content {
-  composes: flex-col;
-  flex-grow: 1;
-  overflow-y: auto;
+  padding: 2em;
 }
 
 .sidebar {
@@ -18,10 +18,10 @@
 }
 
 .section {
-  padding: 1em;
+  padding: 1em 0;
 }
 .big.section {
-  margin: 1em;
+  margin: 2em;
 }
 
 .header1 {
@@ -30,4 +30,18 @@
 
 .color-row {
   composes: flex-row;
+}
+
+.type {
+  .section {
+    padding: 0;
+    background: $dark8;
+    margin: 1em 0;
+  }
+  .section:first-child {
+    margin-top: 0;
+  }
+  .section:-last-child {
+    margin-bottom: 0;
+  }
 }

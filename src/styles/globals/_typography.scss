@@ -8,7 +8,6 @@
 :global {
   body {
     font-size: $default-font-size;
-    font-size: responsive;
     color: $default-font-color;
     font-family: $default-font-family;
     font-weight: 300;
@@ -72,7 +71,7 @@
     font-weight: 100;
   }
   .semi-bold {
-    font-weight: 600;
+    font-weight: 500;
   }
   .bold {
     font-weight: 700;
@@ -90,6 +89,8 @@
   .dark6 { background: $dark6; }
   .dark7 { background: $dark7; }
   .dark8 { background: $dark8; }
+
+  .grey { background: $grey; }
 
   .blue1 { background: $blue1; }
   .blue2 { background: $blue2; }

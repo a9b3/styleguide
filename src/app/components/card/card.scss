@@ -6,10 +6,10 @@
 
 .header {
   composes: flex-row;
-  padding: 1em;
-  border-bottom: 1px solid $dark6;
+  color: $blue3;
 }
 
 .content {
+  padding-top: 2em;
   composes: flex-col;
 }
