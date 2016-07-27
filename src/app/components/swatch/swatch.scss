@@ -7,16 +7,18 @@
   width: 5em;
   border-radius: .2em;
   overflow: hidden;
-  box-shadow: 0 3px 5px rgba(black, 0.2);
+  border: 1px solid $dark8;
   margin: .5em;
 
   .color {
     width: 5em;
     height: 5em;
+    border-bottom: 1px solid $dark8;
   }
 
   .text {
     padding: .5em 1em;
+    font-size: .8em;
   }
 }
 
