@@ -3,7 +3,11 @@ import React, { Component } from 'react'
 import { Link } from 'react-router'
 import CSSModules from 'react-css-modules'
 
-class Sidebar extends Component {
+@CSSModules(styles, {
+  allowMultiple: true,
+  errorWhenNotFound: false,
+})
+export default class Sidebar extends Component {
   renderItems(max) {
     const elems = []
     for (let i = 0; i < max; i++) {
@@ -60,8 +64,3 @@ class Sidebar extends Component {
     </div>
   }
 }
-
-export default CSSModules(Sidebar, styles, {
-  allowMultiple: true,
-  errorWhenNotFound: false,
-})

@@ -31,11 +31,12 @@ $border-color: $dark6;
 }
 
 .list-item {
-  composes: item semi-bold;
+  composes: item;
   color: inherit;
   transition: all 0.5s;
 }
 .list-item-active {
+  composes: semi-bold;
   position: relative;
 
   &::before {
