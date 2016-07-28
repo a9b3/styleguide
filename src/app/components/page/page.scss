@@ -1,0 +1,17 @@
+@import '~styles/shared';
+
+.page {
+  composes: flex-col;
+  flex-grow: 1;
+  overflow-y: auto;
+  // animation: fadeIn 0.5s linear;
+  background: $grey;
+}
+
+.content {
+  margin: 0 auto;
+  display: inline-block;
+  width: 100%;
+  max-width: $max-width;
+}
+

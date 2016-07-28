@@ -1,10 +1,10 @@
 import styles from './general.scss'
 import React, { Component } from 'react'
 import CSSModules from 'react-css-modules'
-import Helmet from 'react-helmet'
+
 import Swatch from '../../../components/swatch/swatch.js'
-import Banner from '../../../components/banner/banner.js'
-import Card from '../../../components/card/card.js'
+import Page from '../../../components/page/page.js'
+import Section from '../../../components/section/section.js'
 
 const Typography = () => {
   const Header1Ex = <div className={`${styles.section}`}>
@@ -151,23 +151,16 @@ const Colors = () => {
 })
 export default class General extends Component {
   render() {
-    return <div styleName='container'>
-      <Helmet title='General' />
-      <Banner title='General' />
+    return <Page title='General'>
+      <div>
+        <Section title='Typography'>
+          <Typography />
+        </Section>
 
-      <div styleName='content'>
-        <div styleName='big section'>
-          <Card header='Typography'>
-            <Typography />
-          </Card>
-        </div>
-
-        <div styleName='big section'>
-          <Card header='Colors'>
-            <Colors />
-          </Card>
-        </div>
+        <Section title='Colors'>
+          <Colors />
+        </Section>
       </div>
-    </div>
+    </Page>
   }
 }

@@ -1,30 +1,28 @@
-import styles from './card.scss'
+import styles from './section.scss'
 import React, { Component, PropTypes } from 'react'
 import CSSModules from 'react-css-modules'
+
+import Card from '../card/card.js'
 
 @CSSModules(styles, {
   allowMultiple: true,
   errorWhenNotFound: false,
 })
-export default class Card extends Component {
+export default class Section extends Component {
   static propTypes = {
-    header: PropTypes.string,
     children: PropTypes.node.isRequired,
+    title: PropTypes.string,
   }
 
   static defaultProps = {
-    header: 'Header',
+    title: 'Title',
   }
 
   render() {
-    return <div styleName='card'>
-      <div styleName='header'>
-        {this.props.header}
-      </div>
-
-      <div styleName='content'>
+    return <div styleName='section'>
+      <Card header={this.props.title}>
         {this.props.children}
-      </div>
+      </Card>
     </div>
   }
 }

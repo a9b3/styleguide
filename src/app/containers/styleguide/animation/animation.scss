@@ -3,3 +3,18 @@
 .animation {
 
 }
+
+.section {
+  composes: flex-row;
+  align-items: center;
+  margin: 3em 0;
+}
+
+.name {
+  composes: bold;
+  min-width: 200px;
+}
+
+.circle {
+
+}

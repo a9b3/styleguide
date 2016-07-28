@@ -1,26 +1,28 @@
-import styles from './card.scss'
+import styles from './page.scss'
 import React, { Component, PropTypes } from 'react'
 import CSSModules from 'react-css-modules'
+
+import Helmet from 'react-helmet'
+import Banner from '../banner/banner.js'
 
 @CSSModules(styles, {
   allowMultiple: true,
   errorWhenNotFound: false,
 })
-export default class Card extends Component {
+export default class Page extends Component {
   static propTypes = {
-    header: PropTypes.string,
+    title: PropTypes.string,
     children: PropTypes.node.isRequired,
   }
 
   static defaultProps = {
-    header: 'Header',
+    title: 'Title',
   }
 
   render() {
-    return <div styleName='card'>
-      <div styleName='header'>
-        {this.props.header}
-      </div>
+    return <div styleName='page'>
+      <Helmet title={this.props.title} />
+      <Banner title={this.props.title} />
 
       <div styleName='content'>
         {this.props.children}

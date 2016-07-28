@@ -35,7 +35,7 @@ $border-color: $dark6;
   transition: all 0.5s;
 }
 .list-item-active {
-  composes: semi-bold;
+  composes: bold;
   position: relative;
 
   &::before {
