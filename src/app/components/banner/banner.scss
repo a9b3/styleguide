@@ -1,9 +1,22 @@
-@import '../../containers/styleguide/components/banner/~styles/shared';
+@import '~styles/shared';
 
 .banner {
   composes: flex-row;
   flex-shrink: 0;
+  justify-content: center;
   color: white;
-  padding: 4em;
-  background: linear-gradient(45deg, $blue1 10%, $purple 100%);
+  padding: 4em 0;
+  background: linear-gradient(45deg, $dark-alt1 50%, $purple 100%);
+}
+
+.content {
+  display: inline-block;
+  width: 100%;
+  max-width: $max-width;
+  box-sizing: border-box;
+  padding: 0 2em;
+}
+
+.title {
+  composes: semi-bold;
 }

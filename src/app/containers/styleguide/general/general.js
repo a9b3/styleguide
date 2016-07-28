@@ -1,18 +1,14 @@
 import styles from './general.scss'
 import React, { Component } from 'react'
 import CSSModules from 'react-css-modules'
-import Helmet from 'react-helmet'
+
 import Swatch from '../../../components/swatch/swatch.js'
-import Banner from '../../../components/banner/banner.js'
-import Card from '../../../components/card/card.js'
-import CodeSnippet from '../../../components/code-snippet/code-snippet.js'
-import jsxToString from 'jsx-to-string'
+import Page from '../../../components/page/page.js'
+import Section from '../../../components/section/section.js'
 
 const Typography = () => {
   const Header1Ex = <div className={`${styles.section}`}>
     <h1>Header 1</h1>
-    <div className={`${styles.header1}`}>Header 1</div>
-    <div className='h1'>Header 1</div>
   </div>
 
   return <div className={`${styles.type}`}>
@@ -45,10 +41,19 @@ const Typography = () => {
         quia pariatur. Vero expedita asperiores similique!
       </div>
     </div>
-
-    <CodeSnippet type='js'>
-      {jsxToString(Header1Ex)}
-    </CodeSnippet>
+    <div className={`${styles.section}`}>
+      <p>
+        This is a paragraph. Amet labore placeat magnam aut voluptates aliquam, quaerat
+        expedita
+        earum! Corrupti cupiditate velit perferendis repellat nobis asperiores
+        quaerat nostrum reiciendis! Doloremque ducimus debitis exercitationem
+        quia pariatur. Vero expedita asperiores similique! This is a paragraph.
+        Amet labore placeat magnam aut voluptates aliquam, quaerat expedita
+        earum! Corrupti cupiditate velit perferendis repellat nobis asperiores
+        quaerat nostrum reiciendis! Doloremque ducimus debitis exercitationem
+        quia pariatur. Vero expedita asperiores similique!
+      </p>
+    </div>
   </div>
 }
 
@@ -140,30 +145,22 @@ const Colors = () => {
   </div>
 }
 
-class General extends Component {
-  render() {
-    return <div styleName='container'>
-      <Helmet title='General' />
-      <Banner title='General' />
-
-      <div styleName='content'>
-        <div styleName='big section'>
-          <Card header='Typography'>
-            <Typography />
-          </Card>
-        </div>
-
-        <div styleName='big section'>
-          <Card header='Colors'>
-            <Colors />
-          </Card>
-        </div>
-      </div>
-    </div>
-  }
-}
-
-export default CSSModules(General, styles, {
+@CSSModules(styles, {
   allowMultiple: true,
   errorWhenNotFound: false,
 })
+export default class General extends Component {
+  render() {
+    return <Page title='General'>
+      <div>
+        <Section title='Typography'>
+          <Typography />
+        </Section>
+
+        <Section title='Colors'>
+          <Colors />
+        </Section>
+      </div>
+    </Page>
+  }
+}

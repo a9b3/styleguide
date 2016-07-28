@@ -1,31 +1,10 @@
 @import '~styles/shared';
 
-.container {
-  composes: flex-col;
-  flex-grow: 1;
-  overflow-y: auto;
-  animation: fadeIn 0.5s linear;
-  background: $grey;
-}
-
-.content {
-  padding: 2em;
-}
-
-.sidebar {
-  composes: flex-col;
-  flex-grow: 1;
-}
-
 .section {
-  padding: 1em 0;
+  padding: 0 2em;
 }
 .big.section {
-  margin: 2em;
-}
-
-.header1 {
-  composes: h1;
+  margin: 5em 0;
 }
 
 .color-row {
@@ -35,7 +14,9 @@
 .type {
   .section {
     padding: 0;
-    background: $dark8;
+    background: $dark7;
+    border-top: 1px solid $dark6;
+    border-bottom: 1px solid $dark6;
     margin: 1em 0;
   }
   .section:first-child {
